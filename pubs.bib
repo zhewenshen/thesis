@@ -1,0 +1,553 @@
+@misc{nist2017wannacry,
+  author = {{National Institute of Standards and Technology}},
+  title = {Bolstering Government Cybersecurity: Lessons Learned from WannaCry},
+  year = {2017},
+  url = {https://www.nist.gov/speech-testimony/bolstering-government-cybersecurity-lessons-learned-wannacry},
+  note = {Accessed: 2025-04-19}
+}
+
+@misc{stackwatch2024stats,
+  author = {{Stack.watch}},
+  title = {2024 Security Vulnerability Statistics},
+  year = {2024},
+  url = {https://stack.watch/stats/2024/},
+  note = {Accessed: 2025-04-19}
+}
+
+@techreport{neumann1975psos,
+  author       = {Peter G. Neumann and R. S. Boyer and W. J. Bressler and D. W. Boulware and K. N. Levitt and R. J. Feiertag and L. Robinson and M. Heck},
+  title        = {A Provably Secure Operating System},
+  institution  = {SRI International, Computer Science Laboratory},
+  year         = {1975},
+  number       = {ESD-TR-75-372},
+  note         = {\url{https://csrc.nist.rip/publications/history/neum75.pdf}}
+}
+
+@inproceedings{feiertag1979psos,
+  author    = {Richard J. Feiertag and Peter G. Neumann},
+  title     = {The Foundations of a Provably Secure Operating System (PSOS)},
+  booktitle = {Proceedings of the National Computer Conference},
+  pages     = {329--334},
+  year      = {1979},
+  publisher = {AFIPS Press},
+  url       = {https://www.csl.sri.com/~neumann/psos.pdf}
+}
+
+@techreport{neumann1980psos,
+  author      = {Peter G. Neumann and Robert S. Boyer and Richard J. Feiertag and Karl N. Levitt and Lawrence Robinson},
+  title       = {A Provably Secure Operating System: The System, Its Applications, and Proofs},
+  institution = {SRI International, Computer Science Laboratory},
+  year        = {1980},
+  number      = {CSL-116},
+  edition     = {Second},
+  url         = {https://www.csl.sri.com/~neumann/psos/psos80.pdf}
+}
+
+@inproceedings{neumann2003psos,
+    author = { Neumann, Peter G. and Feiertag, Richard J. },
+    booktitle = { Computer Security Applications Conference, Annual },
+    title = {{ PSOS Revisited }},
+    year = {2003},
+    volume = {},
+    ISSN = {1063-9527},
+    pages = {208},
+    abstract = { This paper provides a retrospective view of the design of SRI's Provably Secure Operating System (PSOS), a formally specified tagged-capability hierarchical system architecture. It examines PSOS in the light of what has happened in computer system developments since 1980, and assesses the relevance of the PSOS concepts in that light. },
+    keywords = {null},
+    doi = {10.1109/CSAC.2003.1254326},
+    url = {https://doi.ieeecomputersociety.org/10.1109/CSAC.2003.1254326},
+    publisher = {IEEE Computer Society},
+    address = {Los Alamitos, CA, USA},
+    month =Dec
+}
+
+@inproceedings{klein2009seL4,
+    author = {Klein, Gerwin and Elphinstone, Kevin and Heiser, Gernot and Andronick, June and Cock, David and Derrin, Philip and Elkaduwe, Dhammika and Engelhardt, Kai and Kolanski, Rafal and Norrish, Michael and Sewell, Thomas and Tuch, Harvey and Winwood, Simon},
+    title = {seL4: formal verification of an OS kernel},
+    year = {2009},
+    isbn = {9781605587523},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/1629575.1629596},
+    doi = {10.1145/1629575.1629596},
+    abstract = {Complete formal verification is the only known way to guarantee that a system is free of programming errors.We present our experience in performing the formal, machine-checked verification of the seL4 microkernel from an abstract specification down to its C implementation. We assume correctness of compiler, assembly code, and hardware, and we used a unique design approach that fuses formal and operating systems techniques. To our knowledge, this is the first formal proof of functional correctness of a complete, general-purpose operating-system kernel. Functional correctness means here that the implementation always strictly follows our high-level abstract specification of kernel behaviour. This encompasses traditional design and implementation safety properties such as the kernel will never crash, and it will never perform an unsafe operation. It also proves much more: we can predict precisely how the kernel will behave in every possible situation.seL4, a third-generation microkernel of L4 provenance, comprises 8,700 lines of C code and 600 lines of assembler. Its performance is comparable to other high-performance L4 kernels.},
+    booktitle = {Proceedings of the ACM SIGOPS 22nd Symposium on Operating Systems Principles},
+    pages = {207–220},
+    numpages = {14},
+    keywords = {sel4, microkernel, l4, isabelle/hol},
+    location = {Big Sky, Montana, USA},
+    series = {SOSP '09}
+}
+
+@article{Cofer_GBWPFPKKAHS_18,
+    author           = {Cofer, Darren and Gacek, Andrew and Backes, John and Whalen, Michael and Pike, Lee and Foltzer, Adam
+                        and Podhradsky, Michael and Klein, Gerwin and Kuz, Ihor and Andronick, June and Heiser, Gernot and
+                        Stuart, Douglas},
+    date             = {2018-11-15},
+    doi              = {https://doi.org/10.1109/MC.2018.2876051},
+    issn             = {0018-9162},
+    issue            = {11},
+    journal          = {IEEE Computer},
+    month            = nov,
+    pages            = {14-23},
+    paperurl         = {https://trustworthy.systems/publications/full_text/Cofer_GBWPFPKKAHS_18.pdf},
+    publisher        = {IEEE},
+    title            = {{A} Formal Approach to Constructing Secure Air Vehicle Software},
+    volume           = {51},
+    year             = {2018}
+}
+
+
+@online{Qu_24:sel4s,
+  author =        {Ning Qu},
+  month =         oct,
+  note =          {Keynote at the 6\textsuperscript{th} {seL4} {Summit}},
+  title =         {{seL4} in Software-defined Vehicles: Vision, Roadmap,
+                   and Impact at {NIO}},
+  year =          {2024},
+  url =
+  {https://sel4.systems/Foundation/Summit/2024/slides/software-defined.pdf},
+}
+
+@misc{heiser2025lionsos,
+      title={Fast, Secure, Adaptable: LionsOS Design, Implementation and Performance}, 
+      author={Gernot Heiser and Ivan Velickovic and Peter Chubb and Alwin Joshy and Anuraag Ganesh and Bill Nguyen and Cheng Li and Courtney Darville and Guangtao Zhu and James Archer and Jingyao Zhou and Krishnan Winter and Lucy Parker and Szymon Duchniewicz and Tianyi Bai},
+      year={2025},
+      eprint={2501.06234},
+      archivePrefix={arXiv},
+      primaryClass={cs.OS},
+      url={https://arxiv.org/abs/2501.06234}, 
+}
+
+@online{microkit:url,
+  author =        {{seL4 Foundation}},
+  title =         {{seL4} Microkit {GitHub}},
+  year =          {2023},
+  url =           {https://github.com/seL4/microkit},
+}
+
+@inproceedings{sewell2013TV,
+    author = {Sewell, Thomas Arthur Leck and Myreen, Magnus O. and Klein, Gerwin},
+    title = {Translation validation for a verified OS kernel},
+    year = {2013},
+    isbn = {9781450320146},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/2491956.2462183},
+    doi = {10.1145/2491956.2462183},
+    abstract = {We extend the existing formal verification of the seL4 operating system microkernel from 9500 lines of C source code to the binary level. We handle all functions that were part of the previous verification. Like the original verification, we currently omit the assembly routines and volatile accesses used to control system hardware.More generally, we present an approach for proving refinement between the formal semantics of a program on the C source level and its formal semantics on the binary level, thus checking the validity of compilation, including some optimisations, and linking, and extending static properties proved of the source code to the executable. We make use of recent improvements in SMT solvers to almost fully automate this process.We handle binaries generated by unmodified gcc 4.5.1 at optimisation level 1, and can handle most of seL4 even at optimisation level 2.},
+    booktitle = {Proceedings of the 34th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+    pages = {471–482},
+    numpages = {12},
+    keywords = {binary verification, microkernel, seL4},
+    location = {Seattle, Washington, USA},
+    series = {PLDI '13}
+}
+
+@article{leroy2009compcert,
+    author = {Leroy, Xavier},
+    title = {Formal verification of a realistic compiler},
+    year = {2009},
+    issue_date = {July 2009},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {52},
+    number = {7},
+    issn = {0001-0782},
+    url = {https://doi.org/10.1145/1538788.1538814},
+    doi = {10.1145/1538788.1538814},
+    abstract = {This paper reports on the development and formal verification (proof of semantic preservation) of CompCert, a compiler from Clight (a large subset of the C programming language) to PowerPC assembly code, using the Coq proof assistant both for programming the compiler and for proving its correctness. Such a verified compiler is useful in the context of critical software and its formal verification: the verification of the compiler guarantees that the safety properties proved on the source code hold for the executable compiled code as well.},
+    journal = {Commun. ACM},
+    month = jul,
+    pages = {107–115},
+    numpages = {9}
+}
+
+@inproceedings{10.1145/2535838.2535841,
+author = {Kumar, Ramana and Myreen, Magnus O. and Norrish, Michael and Owens, Scott},
+title = {CakeML: a verified implementation of ML},
+year = {2014},
+isbn = {9781450325448},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2535838.2535841},
+doi = {10.1145/2535838.2535841},
+abstract = {We have developed and mechanically verified an ML system called CakeML, which supports a substantial subset of Standard ML. CakeML is implemented as an interactive read-eval-print loop (REPL) in x86-64 machine code. Our correctness theorem ensures that this REPL implementation prints only those results permitted by the semantics of CakeML. Our verification effort touches on a breadth of topics including lexing, parsing, type checking, incremental and dynamic compilation, garbage collection, arbitrary-precision arithmetic, and compiler bootstrapping.Our contributions are twofold. The first is simply in building a system that is end-to-end verified, demonstrating that each piece of such a verification effort can in practice be composed with the others, and ensuring that none of the pieces rely on any over-simplifying assumptions. The second is developing novel approaches to some of the more challenging aspects of the verification. In particular, our formally verified compiler can bootstrap itself: we apply the verified compiler to itself to produce a verified machine-code implementation of the compiler. Additionally, our compiler proof handles diverging input programs with a lightweight approach based on logical timeout exceptions. The entire development was carried out in the HOL4 theorem prover.},
+booktitle = {Proceedings of the 41st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+pages = {179–191},
+numpages = {13},
+keywords = {verified type checking, verified parsing, verified garbage collection., read-eval-print loop, machine code verification, compiler verification, compiler bootstrapping, ML},
+location = {San Diego, California, USA},
+series = {POPL '14}
+}
+
+@article{kumar2014cakeml,
+    author = {Kumar, Ramana and Myreen, Magnus O. and Norrish, Michael and Owens, Scott},
+    title = {CakeML: a verified implementation of ML},
+    year = {2014},
+    issue_date = {January 2014},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {49},
+    number = {1},
+    issn = {0362-1340},
+    url = {https://doi.org/10.1145/2578855.2535841},
+    doi = {10.1145/2578855.2535841},
+    abstract = {We have developed and mechanically verified an ML system called CakeML, which supports a substantial subset of Standard ML. CakeML is implemented as an interactive read-eval-print loop (REPL) in x86-64 machine code. Our correctness theorem ensures that this REPL implementation prints only those results permitted by the semantics of CakeML. Our verification effort touches on a breadth of topics including lexing, parsing, type checking, incremental and dynamic compilation, garbage collection, arbitrary-precision arithmetic, and compiler bootstrapping.Our contributions are twofold. The first is simply in building a system that is end-to-end verified, demonstrating that each piece of such a verification effort can in practice be composed with the others, and ensuring that none of the pieces rely on any over-simplifying assumptions. The second is developing novel approaches to some of the more challenging aspects of the verification. In particular, our formally verified compiler can bootstrap itself: we apply the verified compiler to itself to produce a verified machine-code implementation of the compiler. Additionally, our compiler proof handles diverging input programs with a lightweight approach based on logical timeout exceptions. The entire development was carried out in the HOL4 theorem prover.},
+    journal = {SIGPLAN Not.},
+    month = jan,
+    pages = {179–191},
+    numpages = {13},
+    keywords = {ML, compiler bootstrapping, compiler verification, machine code verification, read-eval-print loop, verified garbage collection., verified parsing, verified type checking}
+}
+
+@inproceedings{Pohjola2023pancake,
+author = {Pohjola, Johannes \r{A}man and Syeda, Hira Taqdees and Tanaka, Miki and Winter, Krishnan and Sau, Tsun Wang and Nott, Benjamin and Ung, Tiana Tsang and McLaughlin, Craig and Seassau, Remy and Myreen, Magnus O. and Norrish, Michael and Heiser, Gernot},
+title = {Pancake: Verified Systems Programming Made Sweeter},
+year = {2023},
+isbn = {9798400704048},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3623759.3624544},
+doi = {10.1145/3623759.3624544},
+abstract = {We introduce Pancake, a new language for verifiable, low-level systems programming, especially device drivers. Pancake eschews complex type systems to make the language attractive to systems programmers, while at the same time aiming to ease the formal verification of code. We describe the design of the language and its verified compiler, and examine its usability, performance and current limitations through case studies of device drivers and related systems components for an seL4-based operating system.},
+booktitle = {Proceedings of the 12th Workshop on Programming Languages and Operating Systems},
+pages = {1–9},
+numpages = {9},
+location = {Koblenz, Germany},
+series = {PLOS '23}
+}
+
+
+@article{thompson1984trust,
+    author = {Thompson, Ken},
+    title = {Reflections on trusting trust},
+    year = {1984},
+    issue_date = {Aug 1984},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {27},
+    number = {8},
+    issn = {0001-0782},
+    url = {https://doi.org/10.1145/358198.358210},
+    doi = {10.1145/358198.358210},
+    abstract = {To what extent should one trust a statement that a program is free of Trojan horses? Perhaps it is more important to trust the people who wrote the software.},
+    journal = {Commun. ACM},
+    month = aug,
+    pages = {761–763},
+    numpages = {3}
+}
+
+@misc{iso_c23,
+  title = {{ISO/IEC 9899:2024 - Programming Languages — C}},
+  author = {{International Organization for Standardization}},
+  year = {2024},
+  note = {\url{https://www.iso.org/standard/82075.html}}
+}
+
+
+@book{kernighan1988c,
+  title     = {The C Programming Language: 2nd Edition},
+  author    = {Kernighan, B. W. and Ritchie, D. M.},
+  year      = {1988},
+  publisher = {Prentice Hall},
+  isbn      = {9780131103627}
+}
+
+@article{butler1993-infeasibility,
+  author    = {Butler, R. W. and Finelli, G. B.},
+  title     = {The Infeasibility of Quantifying the Reliability of Life-Critical Real-Time Software},
+  journal   = {IEEE Transactions on Software Engineering},
+  year      = {1993},
+  volume    = {19},
+  number    = {1},
+  pages     = {3--12},
+  doi       = {10.1109/32.210303},
+  keywords  = {Software reliability, Safety-critical systems, Fault tolerance, Software testing},
+}
+
+@inproceedings{rushby1997-formal-methods,
+  author    = {Rushby, John},
+  editor    = {Shaw, Roger},
+  title     = {Formal Methods and their Role in the Certification of Critical Systems},
+  booktitle = {Safety and Reliability of Software Based Systems},
+  year      = {1997},
+  publisher = {Springer London},
+  address   = {London},
+  pages     = {1--42},
+  abstract  = {This article describes the rationale for formal methods and considers the benefits, weaknesses, and difficulties in applying these methods to digital systems used in critical applications...},
+  isbn      = {978-1-4471-0921-1},
+  note      = {Also discusses DO-178B standards for certification in aviation software systems.}
+}
+
+@misc{liu2025empiricalstudyrustspecificbugs,
+      title={An Empirical Study of Rust-Specific Bugs in the rustc Compiler}, 
+      author={Zixi Liu and Yang Feng and Yunbo Ni and Shaohua Li and Xizhe Yin and Qingkai Shi and Baowen Xu and Zhendong Su},
+      year={2025},
+      eprint={2503.23985},
+      archivePrefix={arXiv},
+      primaryClass={cs.PL},
+      url={https://arxiv.org/abs/2503.23985}, 
+}
+
+@inproceedings{yang2011compilerbugs,
+    author = {Yang, Xuejun and Chen, Yang and Eide, Eric and Regehr, John},
+    title = {Finding and understanding bugs in C compilers},
+    year = {2011},
+    isbn = {9781450306638},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/1993498.1993532},
+    doi = {10.1145/1993498.1993532},
+    abstract = {Compilers should be correct. To improve the quality of C compilers, we created Csmith, a randomized test-case generation tool, and spent three years using it to find compiler bugs. During this period we reported more than 325 previously unknown bugs to compiler developers. Every compiler we tested was found to crash and also to silently generate wrong code when presented with valid input. In this paper we present our compiler-testing tool and the results of our bug-hunting study. Our first contribution is to advance the state of the art in compiler testing. Unlike previous tools, Csmith generates programs that cover a large subset of C while avoiding the undefined and unspecified behaviors that would destroy its ability to automatically find wrong-code bugs. Our second contribution is a collection of qualitative and quantitative results about the bugs we have found in open-source C compilers.},
+    booktitle = {Proceedings of the 32nd ACM SIGPLAN Conference on Programming Language Design and Implementation},
+    pages = {283–294},
+    numpages = {12},
+    keywords = {automated testing, compiler defect, compiler testing, random program generation, random testing},
+    location = {San Jose, California, USA},
+    series = {PLDI '11}
+}
+
+
+@article{hartig1997ukernel,
+    author = {H\"{a}rtig, Hermann and Hohmuth, Michael and Liedtke, Jochen and Sch\"{o}nberg, Sebastian and Wolter, Jean},
+    title = {The performance of μ-kernel-based systems},
+    year = {1997},
+    issue_date = {Dec. 1997},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {31},
+    number = {5},
+    issn = {0163-5980},
+    url = {https://doi.org/10.1145/269005.266660},
+    doi = {10.1145/269005.266660},
+    journal = {SIGOPS Oper. Syst. Rev.},
+    month = oct,
+    pages = {66–77},
+    numpages = {12}
+}
+
+@inproceedings {chen2024hongmeng,
+    author = {Haibo Chen and Xie Miao and Ning Jia and Nan Wang and Yu Li and Nian Liu and Yutao Liu and Fei Wang and Qiang Huang and Kun Li and Hongyang Yang and Hui Wang and Jie Yin and Yu Peng and Fengwei Xu},
+    title = {Microkernel Goes General: Performance and Compatibility in the {HongMeng} Production Microkernel},
+    booktitle = {18th USENIX Symposium on Operating Systems Design and Implementation (OSDI 24)},
+    year = {2024},
+    isbn = {978-1-939133-40-3},
+    address = {Santa Clara, CA},
+    pages = {465--485},
+    url = {https://www.usenix.org/conference/osdi24/presentation/chen-haibo},
+    publisher = {USENIX Association},
+    month = jul
+}
+
+@techreport{heiser2025sel4,
+  author       = {Gernot Heiser},
+  title        = {The seL4 Microkernel: An Introduction},
+  institution  = {seL4 Project},
+  year         = {2025},
+  number       = {Revision 1.4},
+  month        = jan,
+  url          = {https://sel4.systems/About/seL4-whitepaper.pdf},
+  note         = {Accessed: 2025-04-25}
+}
+
+@misc{aos2024microkernel,
+  author       = {Gernot Heiser},
+  title        = {COMP9242 Advanced Operating Systems: Microkernel Design \& Implementation -- The 25-Year Quest for the Right API (Week 05 Part 1)},
+  year         = {2024},
+  month        = {oct},
+  howpublished = {\url{https://cgi.cse.unsw.edu.au/~cs9242/24/lectures/05a-uk.pdf}},
+  note         = {Lecture slides, UNSW School of Computer Science \& Engineering}
+}
+
+@article{sel4:sosp-2009,
+    author = {Klein, Gerwin and Andronick, June and Elphinstone, Kevin and Heiser, Gernot and Cock, David and Derrin, Philip and Elkaduwe, Dhammika and Engelhardt, Kai and Kolanski, Rafal and Norrish, Michael and Sewell, Thomas and Tuch, Harvey and Winwood, Simon},
+    title = {seL4: formal verification of an operating-system kernel},
+    year = {2010},
+    issue_date = {June 2010},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {53},
+    number = {6},
+    issn = {0001-0782},
+    url = {https://doi.org/10.1145/1743546.1743574},
+    doi = {10.1145/1743546.1743574},
+    journal = {Commun. ACM},
+    month = jun,
+    pages = {107–115},
+    numpages = {9}
+}
+
+@article{liedtke1995microkernel,
+author = {Liedtke, J.},
+title = {On micro-kernel construction},
+year = {1995},
+issue_date = {Dec. 3, 1995},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {29},
+number = {5},
+issn = {0163-5980},
+url = {https://doi.org/10.1145/224057.224075},
+doi = {10.1145/224057.224075},
+journal = {SIGOPS Oper. Syst. Rev.},
+month = dec,
+pages = {237–250},
+numpages = {14}
+}
+
+
+@INPROCEEDINGS{heiser2022siot,
+  author={Heiser, Gernot and Parker, Lucy and Chubb, Peter and Velickovic, Ivan and Leslie, Ben},
+  booktitle={2022 IEEE 8th World Forum on Internet of Things (WF-IoT)}, 
+  title={Can We Put the “S” Into IoT?}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Performance evaluation;Costs;Linux;Operating systems;Switches;Robustness;Security;operating systems;verification;performance;internet of things;microkernel;hypervisor},
+  doi={10.1109/WF-IoT54382.2022.10152198}}
+
+
+@article{klein2014sel4,
+author = {Klein, Gerwin and Andronick, June and Elphinstone, Kevin and Murray, Toby and Sewell, Thomas and Kolanski, Rafal and Heiser, Gernot},
+title = {Comprehensive formal verification of an OS microkernel},
+year = {2014},
+issue_date = {February 2014},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {32},
+number = {1},
+issn = {0734-2071},
+url = {https://doi.org/10.1145/2560537},
+doi = {10.1145/2560537},
+abstract = {We present an in-depth coverage of the comprehensive machine-checked formal verification of seL4, a general-purpose operating system microkernel.We discuss the kernel design we used to make its verification tractable. We then describe the functional correctness proof of the kernel's C implementation and we cover further steps that transform this result into a comprehensive formal verification of the kernel: a formally verified IPC fastpath, a proof that the binary code of the kernel correctly implements the C semantics, a proof of correct access-control enforcement, a proof of information-flow noninterference, a sound worst-case execution time analysis of the binary, and an automatic initialiser for user-level systems that connects kernel-level access-control enforcement with reasoning about system behaviour. We summarise these results and show how they integrate to form a coherent overall analysis, backed by machine-checked, end-to-end theorems.The seL4 microkernel is currently not just the only general-purpose operating system kernel that is fully formally verified to this degree. It is also the only example of formal proof of this scale that is kept current as the requirements, design and implementation of the system evolve over almost a decade. We report on our experience in maintaining this evolving formally verified code base.},
+journal = {ACM Trans. Comput. Syst.},
+month = feb,
+articleno = {2},
+numpages = {70},
+keywords = {Isabelle/HOL, L4, microkernel, operating systems, seL4}
+}
+
+@inproceedings{mi2019skybridge,
+author = {Mi, Zeyu and Li, Dingji and Yang, Zihan and Wang, Xinran and Chen, Haibo},
+title = {SkyBridge: Fast and Secure Inter-Process Communication for Microkernels},
+year = {2019},
+isbn = {9781450362818},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3302424.3303946},
+doi = {10.1145/3302424.3303946},
+abstract = {Microkernels have been extensively studied over decades. However, IPC (Inter-Process Communication) is still a major factor of runtime overhead, where fine-grained isolation usually leads to excessive IPCs. The main overhead of IPC comes from the involvement of the kernel, which includes the direct cost of mode switches and address space changes, as well as indirect cost due to the pollution of processor structures.In this paper, we present SkyBridge, a new communication facility designed and optimized for synchronous IPC in microkernels. SkyBridge requires no involvement of kernels during communication and allows a process to directly switch to the virtual address space of the target process and invoke the target function. SkyBridge retains the traditional virtual address space isolation and thus can be easily integrated into existing microkernels. The key idea of SkyBridge is to leverage a commodity hardware feature for virtualization (i.e., VMFUNC) to achieve efficient IPC. To leverage the hardware feature, SkyBridge inserts a tiny virtualization layer (Rootkernel) beneath the original microkernel (Subkernel). The Rootkernel is carefully designed to eliminate most virtualization overheads. SkyBridge also integrates a series of techniques to guarantee the security properties of IPC.We have implemented SkyBridge on three popular open-source microkernels (seL4, Fiasco.OC, and Google Zircon). The evaluation results show that SkyBridge improves the speed of IPC by 1.49x to 19.6x for microbenchmarks. For real-world applications (e.g., SQLite3 database), SkyBridge improves the throughput by 81.9\%, 1.44x and 9.59x for the three microkernels on average.},
+booktitle = {Proceedings of the Fourteenth EuroSys Conference 2019},
+articleno = {9},
+numpages = {15},
+location = {Dresden, Germany},
+series = {EuroSys '19}
+}
+
+
+@inproceedings{elkaduwe2008sel4mem,
+author = {Elkaduwe, Dhammika and Derrin, Philip and Elphinstone, Kevin},
+title = {Kernel design for isolation and assurance of physical memory},
+year = {2008},
+isbn = {9781605581262},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/1435458.1435465},
+doi = {10.1145/1435458.1435465},
+abstract = {Embedded systems are evolving into increasingly complex software systems. One approach to managing this software complexity is to divide the system into smaller, tractable components and provide strong isolation guarantees between them. This paper focuses on one aspect of the system's behaviour that is critical to any such guarantee: management of physical memory resources.We present the design of a kernel that has formally demonstrated the ability to make strong isolation guarantees of physical memory. We also present the macro-level performance characteristics of a kernel implementing the proposed design.},
+booktitle = {Proceedings of the 1st Workshop on Isolation and Integration in Embedded Systems},
+pages = {35–40},
+numpages = {6},
+keywords = {embedded systems, isolation, memory management, microkernels, seL4},
+location = {Glasgow, Scotland},
+series = {IIES '08}
+}
+
+
+@article{KUZ2007687,
+title = {CAmkES: A component model for secure microkernel-based embedded systems},
+journal = {Journal of Systems and Software},
+volume = {80},
+number = {5},
+pages = {687-699},
+year = {2007},
+note = {Component-Based Software Engineering of Trustworthy Embedded Systems},
+issn = {0164-1212},
+doi = {https://doi.org/10.1016/j.jss.2006.08.039},
+url = {https://www.sciencedirect.com/science/article/pii/S016412120600224X},
+author = {Ihor Kuz and Yan Liu and Ian Gorton and Gernot Heiser},
+keywords = {Component architecture, Microkernel, Embedded system},
+abstract = {Component-based software engineering promises to provide structure and reusability to embedded-systems software. At the same time, microkernel-based operating systems are being used to increase the reliability and trustworthiness of embedded systems. Since the microkernel approach to designing systems is partially based on the componentisation of system services, component-based software engineering is a particularly attractive approach to developing microkernel-based systems. While a number of widely used component architectures already exist, they are generally targeted at enterprise computing rather than embedded systems. Due to the unique characteristics of embedded systems, a component architecture for embedded systems must have low overhead, be able to address relevant non-functional issues, and be flexible to accommodate application specific requirements. In this paper we introduce a component architecture aimed at the development of microkernel-based embedded systems. The key characteristics of the architecture are that it has a minimal, low-overhead, core but is highly modular and therefore flexible and extensible. We have implemented a prototype of this architecture and confirm that it has very low overhead and is suitable for implementing both system-level and application level services.}
+}
+
+
+
+@manual{camkes-docs,
+  title        = {CAmkES: Component Architecture for microkernel-based Embedded Systems},
+  author       = {{seL4 Foundation}},
+  organization = {seL4 Foundation},
+  year         = {2025},
+  note         = {Accessed: 2025-04-26},
+  url          = {https://docs.sel4.systems/projects/camkes/}
+}
+
+@misc{camkes-project,
+  title        = {CAmkES: Component Architecture for Microkernel-Based Embedded Systems},
+  author       = {{Trustworthy Systems}},
+  year         = {2025},
+  howpublished = {\url{https://trustworthy.systems/projects/OLD/camkes}},
+  note         = {Accessed: 2025-04-26}
+}
+
+
+@misc{microkit-project,
+  title        = {The seL4 Microkit},
+  author       = {{Trustworthy Systems}},
+  year         = {2025},
+  howpublished = {\url{https://trustworthy.systems/projects/microkit/}},
+  note         = {Accessed: 2025-04-26}
+}
+
+@article{ub-pldi25,
+  title =	{Exploiting Undefined Behavior in C/C++ Programs for Optimization: A Study on the Performance Impact},
+  author =	{Lucian Popescu and Nuno P. Lopes},
+  journal =	{Proc. of the ACM on Programming Languages},
+  volume =	{9},
+  number =	{PLDI},
+  publisher =	{ACM},
+  doi =		{10.1145/3729260},
+  month =	jun,
+  year =	2025
+}
+
+@misc{zhao2025verifyingdevicedriverspancake,
+      title={Verifying Device Drivers with Pancake}, 
+      author={Junming Zhao and Alessandro Legnani and Tiana Tsang Ung and H. Truong and Tsun Wang Sau and Miki Tanaka and Johannes Åman Pohjola and Thomas Sewell and Rob Sison and Hira Syeda and Magnus Myreen and Michael Norrish and Gernot Heiser},
+      year={2025},
+      eprint={2501.08249},
+      archivePrefix={arXiv},
+      primaryClass={cs.PL},
+      url={https://arxiv.org/abs/2501.08249}, 
+}
+
+}
+
+@inproceedings{zhao2012vellvm,
+author = {Zhao, Jianzhou and Nagarakatte, Santosh and Martin, Milo M.K. and Zdancewic, Steve},
+title = {Formalizing the LLVM intermediate representation for verified program transformations},
+year = {2012},
+isbn = {9781450310833},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2103656.2103709},
+doi = {10.1145/2103656.2103709},
+abstract = {This paper presents Vellvm (verified LLVM), a framework for reasoning about programs expressed in LLVM's intermediate representation and transformations that operate on it. Vellvm provides a mechanized formal semantics of LLVM's intermediate representation, its type system, and properties of its SSA form. The framework is built using the Coq interactive theorem prover. It includes multiple operational semantics and proves relations among them to facilitate different reasoning styles and proof techniques.To validate Vellvm's design, we extract an interpreter from the Coq formal semantics that can execute programs from LLVM test suite and thus be compared against LLVM reference implementations. To demonstrate Vellvm's practicality, we formalize and verify a previously proposed transformation that hardens C programs against spatial memory safety violations. Vellvm's tools allow us to extract a new, verified implementation of the transformation pass that plugs into the real LLVM infrastructure; its performance is competitive with the non-verified, ad-hoc original.},
+booktitle = {Proceedings of the 39th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages},
+pages = {427–440},
+numpages = {14},
+keywords = {Coq, LLVM, memory safety},
+location = {Philadelphia, PA, USA},
+series = {POPL '12}
+}
+

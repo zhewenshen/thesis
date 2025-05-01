@@ -1,0 +1,52 @@
+\chapter{Related Work}
+\label{ch:related-work}
+
+\section{Verification Friendly Languages}
+\todo[inline]{TODO: Introduce the trend toward verification-friendly languages (SPARK Ada, F*, Rust, Frama C?), highlight that while they improve source-level safety and verifiability, their unverified compilers still leave a large trusted computing base (TCB). Emphasize that full end-to-end system verification requires not just safer languages but verified compilation. Originally this section was going to be just talking about Rust (most likely just a subsection in the background) but following Peter's feedbacks from the seminar, I think it is needed to either make the distinction here or in the background section.}
+\subsection{Rust in Particular}
+
+\newpage
+
+\section{Verified Compilers}
+\subsection{CompCert}
+
+CompCert is one of the first practical, production-grade verified optimising compilers for a substantial subset of the C programming language. Its correctness proof is mechanised in Coq and formally guarantees that the compiled assembly code behaves as specified by the semantics of the source C program. The verification covers the back-end optimisations and code generation phases. However, the front-end parsing and elaboration steps—which handle unsupported or ambiguous C constructs—are written in OCaml and are not verified. As a result, bugs found in the unverified front-end, as identified in \citep{yang2011compilerbugs}, remain a residual risk.
+
+Being a rather mature compiler, CompCert C supports most of ISO C99 and a significant portion of C11 \citep{leroy2009compcert}. Given its target domain of safety- and mission-critical systems, language coverage and compatibility have never been a major concern. In our experience, the engineering overhead associated with adopting CompCert is relatively low compared to alternatives.
+
+Despite prioritising verification over aggressive optimisation, CompCert produces code that is highly competitive with traditional compilers. On PowerPC and ARM platforms, CompCert’s generated code achieves about 90\% of the performance of GCC 4 compiled at optimisation level \texttt{-O1}, and approximately 80--85\% compared to \texttt{-O2} and \texttt{-O3}. The performance gap is primarily due to the absence of sophisticated loop transformations and high-level optimisations. Nonetheless, for most embedded and critical applications, this tradeoff between performance and assurance is well justified \citep{leroy2009compcert}.
+
+\subsection{CakeML}
+CakeML is a verified functional programming language and toolchain based on a substantial subset of Standard ML (SML). It features a fully mechanised semantics in higher-order logic (HOL) and a proven-correct compiler capable of bootstrapping itself \citep{kumar2014cakeml}. The language design is kept simple and functional to make formal verification tractable, although the standard basis library is still evolving.
+
+The CakeML compiler consists of two frontends and a verified backend. The first frontend is a proof-producing translator that synthesises CakeML programs from HOL definitions, while the second is a conventional parser and type inferencer, both formally proved sound and complete. The backend generates machine code for several architectures, including x86, ARM, and RISC-V, and passes through multiple verified intermediate representations. The entire toolchain has been bootstrapped inside HOL, resulting in a verified binary that provably implements the compiler itself.
+
+CakeML has been used to build a variety of verified applications, including Unix-like utilities (e.g., \texttt{grep}, \texttt{sort}, \texttt{diff}), proof checkers for certificates and SAT solvers, and larger systems like Candle, a verified re-implementation of the HOL Light theorem prover. It has also served as a basis for verified compilers targeting other languages, such as PureCake (for a lazy functional language) and Pancake (for low-level systems programming). 
+
+
+\subsection{Pancake}
+Pancake is a recently developed verified systems programming language targeting low-level systems code, particularly device drivers \citep{Pohjola2023pancake}. Designed to sit at an abstraction level between C and assembly. Currently, Pancake prioritises ease of verification over language features, deliberately eschewing sophisticated type systems to simplify formal reasoning.
+
+The language design is radically simple. Pancake supports only three kinds of data: machine words, code labels (function pointers), and structs (bundles of machine words and labels).\footnote{Not C-style structs.} There is no heap allocation at runtime (only statically allocated heap memory), no stack inspection, no concurrency primitives, and no undefined behaviour. Expressions are side-effect free, and evaluation order is fully specified, eliminating many sources of verification complexity common in C.
+
+\subsubsection{Verifying Device Drivers with Pancake}
+
+Pancake has been used to verify a performant Ethernet device driver for the Lions operating system. The driver targets a 1GbE NIC on an ARM-based SoC, and achieves near line-rate performance with only around 10\% CPU overhead compared to an unverified C implementation \citep{zhao2025verifyingdevicedriverspancake}.
+
+Verification combines two mechanisms: (1) the aforementioned Pancake compilation pipeline, and (2) an automated deductive verification frontend based on Viper. Pancake source code is annotated with function contracts and loop invariants, which are preserved through transpilation into Viper’s intermediate language for SMT-based verification. Memory safety, device interface compliance, network protocol correctness, and data integrity across packet transfers are all formally verified.
+
+The implementation and verification for the entire ethernet driver took around three person-months of work by a systems engineer with no prior verification experience. The verification establishes end-to-end properties of the compiled binary, with the only major trusted components being the HOL4 theorem prover and the Viper verification framework.
+
+This result demonstrates that Pancake is capable of supporting low-level, performant, verifiable device drivers without introducing excessive engineering or verification overhead.
+
+\subsection{VeLLVM}
+\todo[inline]{came across this randomly, not sure if I should include it}
+VeLLVM (Verified LLVM) is a framework for mechanised reasoning about the LLVM intermediate representation (IR) and its transformations, formalised in Coq \citep{zhao2012vellvm}. It provides a formal semantics for a subset of LLVM IR, along with verified proofs about specific transformation passes, such as memory safety enforcement.
+
+However, VeLLVM does not constitute a verified compiler. It verifies transformations over an intermediate representation, rather than providing end-to-end correctness from source code to binary, and relies on an unverified backend.
+
+As such, VeLLVM is not considered further in this thesis.
+
+
+
+

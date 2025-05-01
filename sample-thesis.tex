@@ -1,0 +1,96 @@
+\documentclass[final, singlespacing]{unswthesis}
+\usepackage{csquotes}
+\usepackage{todonotes}
+\usepackage{url}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[newfloat]{minted}
+\usemintedstyle{colorful}
+\usepackage{float}
+\usepackage{natbib}
+% \usepackage{fontspec}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{newfloat}
+\usepackage[utf8]{inputenc}
+\usepackage{textgreek} 
+
+% \DeclareFloatingEnvironment[
+%     fileext=lol,
+%     listname=List of Listings,
+%     name=Listing
+% ]{listing}
+
+\newenvironment{code}{\captionsetup{type=listing}}{}
+
+
+\renewcommand{\subsectionautorefname}{Section}
+\renewcommand{\subsubsectionautorefname}{Section}
+\renewcommand{\paragraphautorefname}{Section}
+
+
+
+%%% Class options:
+
+%  undergrad (default)
+%  hdr
+
+%  11pt (default)
+%  12pt
+
+%  final (default)
+%  draft
+
+%  oneside (default for hdr)
+%  twoside (default for undergrad)
+
+
+%% Thesis details
+\thesistitle{Evaluation of Programming Languages and Compiler Systems for Verified LionsOS Components}
+\thesisschool{School of Computer Science and Engineering}
+\thesisauthor{Zhewen Shen}
+\thesisZid{z5388136}
+\thesisdegree{Bachelor of Advanced Computer Science (Honours)}
+\thesisdate{April 2025}
+\thesissupervisor{Prof.\ Gernot Heiser}
+
+%% My own LaTeX macros, definitions, etc
+\include{definitions}
+
+
+\begin{document}
+
+%% pages in the ``frontmatter'' section have roman numeral page number
+\frontmatter  
+\maketitle
+
+\include{abstract}
+\include{acknowledgements}
+\include{abbreviations}
+
+\tableofcontents
+\listoffigures  % if required
+\listoftables  % if required
+
+%% pages in the ``mainmatter'' section have arabic page numbers and chapters are numbered
+\mainmatter
+
+\include{introduction}
+\include{background}
+\include{related-work}
+% \include{evaluation}
+% \include{conclusion}
+
+\backmatter
+\bibliographystyle{agsm}
+\bibliography{pubs}
+
+% \include{appendix1}
+% \include{appendix2}
+
+\end{document}
